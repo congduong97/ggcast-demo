@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rngc",
-    "slug": "rngc",
+    "name": "RNGCExpo",
+    "slug": "RNGCExpo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,16 +12,25 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.petrbela.googlecast.expo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.petrbela.googlecast.expo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-google-cast",
+        { "iosStartDiscoveryAfterFirstTapOnCastButton": false }
+      ],
+      ["expo-build-properties", { "ios": { "deploymentTarget": "14.0" } }]
+    ]
   }
 }
